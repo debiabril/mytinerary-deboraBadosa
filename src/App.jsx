@@ -1,13 +1,13 @@
-import { useState } from 'react'
-import viteLogo from '/vite.svg'
 import './App.css'
+import Layout from './layouts/Layout'
+import Home from './pages/Index/Home'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
-      <h1 className=''>HELLO WORD</h1>
+      <Layout>
+        <Home/>
+      </Layout>
     </>
   )
 }
