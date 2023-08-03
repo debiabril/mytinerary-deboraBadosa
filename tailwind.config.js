@@ -5,11 +5,15 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      backgroundImage: {
+        'heroBg': "url('https://fondosmil.com/fondo/85131.jpg')",
+      }
+    },
   },
   plugins: [require("daisyui")],
-  /* daisyui: {
+  daisyui: {
     themes: ["light"],
-  }, */
+  },
 }
 
