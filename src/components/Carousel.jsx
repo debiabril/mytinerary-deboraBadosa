@@ -1,4 +1,5 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
+import '../styles/Carousel.css'
 
 const Carousel = () => {
   let [index, setIndex] = useState(0);
@@ -76,38 +77,57 @@ const Carousel = () => {
   },
   ]
   const handlePrev = () => {
-      setIndex(index - 4)
+    index>0? setIndex(index - 4) : setIndex(8);
   }
 
   const handleNext = () => {
-      setIndex(index + 4)
+    index<8 ? setIndex(index + 4) : setIndex(0);
   }
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      if (index < 8) {
+        setIndex(index + 4)
+      } else {
+        setIndex(0)
+      }
+
+    }, 2000)
+    return () => {
+      clearInterval(timer)
+    }
+  }, [index]) 
+
   return (
     <>
-      <div className='min-h-[60vh]'>
-        <h2 className='bg-white text-center text-black text-bold text-3xl mb-2'>Popular MYTINERARIES</h2>
-        <div className='md:mx-20 h-[70vh] grid grid-cols-2 grid-rows-2 gap-4'>
+      <div className='bg-black text-center flex justify-center'>
+      <h2 id='titleCarousel' className='text-center  text-lime-400 text-bold text-3xl tracking-widest mb-2 w-3/4 md:w-full'>Popular MYTINERARIES</h2>
+      </div>
+      <div className='flex justify-center min-h-[60vh] max-w-full'>
+        <button className="btn btn-circle mt-[30vh] mr-2 text-indigo-600 bg-indigo-100 hover:bg-teal-600 hover:text-teal-100" onClick={handlePrev}>❮</button>
+        <div className=' h-[70vh] w-5/6 grid  sm:grid-rows-2 grid-cols-1 sm:grid-cols-2 md:gap-4 mb-3 mt-2'>
           {[0, 1, 2, 3].map((i) => (
-            <a key={i} className='block group relative bg-black '>
+            <a key={i} className='block group relative rounded-xl border-purple-400 border-2 border-double bg-black '>
               <img
-                className='absolute inset-0 object-cover object-center h-full w-full'
+                className='absolute rounded-xl inset-0 object-cover object-center h-full w-full'
                 src={images[index + i].url}
               />
-              <div className='relative p-4 sm:p-6 lg:p-8 bg-black bg-opacity-40'>
-                <p className='text-2xl text-center uppercase tracking-widest text-white'>
+              <div className='relative p-4 sm:p-6 lg:p-8 bg-black bg-opacity-50 rounded-xl rounded-b-none'>
+                <p className='text-2xl text-center font-bold uppercase  tracking-widest text-lime-400'>
                   {images[index + i].city}
                 </p>
-                <p className="text-xl text-center font-bold  text-white sm:text-2xl">
+                <p className="text-xl text-center font-bold tracking-widest  text-cyan-400 sm:text-2xl">
                   {images[index + i].country}
                 </p>
               </div>
             </a>
           ))}
         </div>
-        <div className='flex justify-center my-2'>
+        <button className="btn btn-circle mt-[30vh] ml-2 text-indigo-600 bg-indigo-100 hover:bg-teal-600 hover:text-teal-100 " onClick={handleNext}>❯</button>
+        {/* <div className='flex justify-center my-2'>
           <button className=' bg-indigo-50 px-5 py-3 mx-4 text-sm shadow-sm font-medium tracking-wider text-indigo-600 rounded-full hover:shadow-2xl hover:bg-indigo-100' onClick={handlePrev}>Prev</button>
           <button className='bg-indigo-50 px-5 py-3 mx-4 text-sm shadow-sm font-medium tracking-wider text-indigo-600 rounded-full hover:shadow-2xl hover:bg-indigo-100' onClick={handleNext}>Next</button>
-        </div>
+        </div> */}
       </div>
     </>
   )
