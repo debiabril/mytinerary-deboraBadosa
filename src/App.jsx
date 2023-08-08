@@ -1,13 +1,18 @@
+import { RouterProvider } from 'react-router-dom'
 import './App.css'
-import Layout from './layouts/Layout'
-import Home from './pages/Index/Home'
+import router from './router/Router'
+
+/* import Layout from './layouts/Layout'
+import Home from './pages/Home' */
+
 
 function App() {
   return (
     <>
-      <Layout>
+      {/* <Layout>
         <Home/>
-      </Layout>
+      </Layout> */}
+      <RouterProvider router = {router}/>
     </>
   )
 }
