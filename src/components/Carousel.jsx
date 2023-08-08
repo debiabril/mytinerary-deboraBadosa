@@ -6,7 +6,7 @@ const Carousel = () => {
   const images = [{
       title: 'City1',
       url: 'https://upload.wikimedia.org/wikipedia/commons/6/67/London_Skyline_%28125508655%29.jpeg',
-      city: 'Londres',
+      city: 'London',
       country: 'England'
   },
   {
@@ -25,7 +25,7 @@ const Carousel = () => {
     title: 'City4',
     url: 'https://blog.japanwondertravel.com/wp-content/uploads/2022/03/manuel-velasquez-ssfp9okORYs-unsplash.jpg',
     city: 'Tokyo',
-    country: 'Japon'
+    country: 'Japan'
   },
   {
     title: 'City5',
@@ -37,42 +37,42 @@ const Carousel = () => {
     title: 'City6',
     url: 'https://img2.rtve.es/v/868498/square/?h=400',
     city: 'Barcelona',
-    country: 'España'
+    country: 'Spain'
   },
   {
     title: 'City7',
     url: 'https://media.traveler.es/photos/6231abc7d03e1c5549e648ca/16:9/w_2560%2Cc_limit/The%2520Best%2520Places%2520for%2520Female%2520Solo%2520Travelers_Amsterdam_GettyImages-923546342.jpg',
-    city: 'Ámsterdam',
-    country: 'Paises bajos'
+    city: 'Amsterdam',
+    country: 'Netherlands'
   },
   {
     title: 'City8',
     url: 'https://historia.nationalgeographic.com.es/medio/2019/12/11/coliseo-roma_2924b6ae_1280x720.jpg',
-    city: 'Roma',
-    country: 'Italia'
+    city: 'Rome',
+    country: 'Italy'
   },
   {
     title: 'City9',
     url: 'https://www.civitatis.com/blog/wp-content/uploads/2022/10/panoramica-rio-janeiro-brasil.jpg',
-    city: 'Río de Janeiro',
-    country: 'Brasil'
+    city: 'Rio de Janeiro',
+    country: 'Brazil'
   },
   {
     title: 'City10',
     url: 'https://images.ecestaticos.com/Eha5BQExbrkOVLCYYSOibX40YRQ=/0x0:1000x750/1200x900/filters:fill(white):format(jpg)/f.elconfidencial.com%2Foriginal%2F036%2Fcf6%2F706%2F036cf6706198f8ac3e0fbeb0a759e020.jpg',
-    city: 'Copenhague',
-    country: 'Dinamarca'
+    city: 'Copenhagen',
+    country: 'Denmark'
   },
   {
     title: 'City11',
     url: 'https://www.civitatis.com/blog/wp-content/uploads/2020/05/estambul-un-dia.jpg',
-    city: 'Estambul',
-    country: 'Turquía'
+    city: 'Istanbul',
+    country: 'Turkey'
   },
   {
     title: 'City12',
     url: 'https://cafedelasciudades.com.ar/wp-content/uploads/2022/12/Guia-turistica-de-Sidney.jpg',
-    city: 'Sídney',
+    city: 'Sydney',
     country: 'Australia'
   },
   ]
