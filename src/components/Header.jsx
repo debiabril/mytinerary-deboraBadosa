@@ -1,14 +1,11 @@
 import React from 'react'
 import BtnAvatar from './BtnAvatar'
 import { Link as LinkRouter } from 'react-router-dom'
+import links from '../utiles/links'
 import '../styles/Header.css'
 
 
 export default function Header() {
-  const links = [
-    {title: 'Home', to: '/'},
-    {title: 'Cities', to: '/cities'},
-]
   return (
     <>
       <header className='flex justify-between h-12 items-center px-3 bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90%'>
@@ -19,7 +16,7 @@ export default function Header() {
           <h1 id='titleNavbar' className='font-bold text-white tracking-widest drop-shadow-darkShadow '>MYTINERARY</h1>
         </nav>
         {
-          links.map((link) => (<LinkRouter to={link.to} className='navbar-link text-white'> {link.title}
+          links.map((link) => (<LinkRouter key={link.title} to={link.to} className='navbar-link text-white'> {link.title}
           </LinkRouter> ))
         }        
         <BtnAvatar/>
