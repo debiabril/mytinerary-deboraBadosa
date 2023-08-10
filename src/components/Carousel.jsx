@@ -105,7 +105,7 @@ const Carousel = () => {
       </div>
       <div className='bg-cyan-600 flex justify-center min-h-[60vh] max-w-full'>
         <button className="btn btn-circle mt-[30vh] mr-2 text-indigo-600 bg-indigo-100 hover:bg-teal-600 hover:text-teal-100" onClick={handlePrev}>❮</button>
-        <div className=' h-[70vh] w-5/6 grid  sm:grid-rows-2 grid-cols-1 sm:grid-cols-2 md:gap-4 mb-3 mt-2'>
+        <div className=' h-[70vh] w-5/6 grid  sm:grid-rows-2 grid-cols-1 sm:grid-cols-2 gap-2 md:gap-4 mb-3 mt-2'>
           {[0, 1, 2, 3].map((i) => (
             <a key={i} className='block group relative rounded-xl border-purple-400 border-2 border-double bg-black '>
               <img
@@ -113,10 +113,10 @@ const Carousel = () => {
                 src={images[index + i].url}
               />
               <div className='relative p-4 sm:p-6 lg:p-8 bg-black bg-opacity-50 rounded-xl rounded-b-none'>
-                <p className='text-2xl text-center drop-shadow-darkShadow font-bold uppercase  tracking-widest text-lime-400'>
+                <p className='md:text-2xl text-center drop-shadow-darkShadow font-bold uppercase  tracking-widest text-lime-400'>
                   {images[index + i].city}
                 </p>
-                <p className="text-xl text-center drop-shadow-darkShadow font-bold tracking-widest  text-cyan-400 sm:text-2xl">
+                <p className="text-lg text-center drop-shadow-darkShadow font-bold tracking-widest  text-cyan-400 md:text-2xl">
                   {images[index + i].country}
                 </p>
               </div>
