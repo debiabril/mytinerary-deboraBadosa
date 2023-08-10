@@ -10,7 +10,7 @@ export default function Footer() {
         <div className='relative z-[1] container m-auto px-6 md:px-12'>
           <div className='m-auto md:w-10/12 lg:w-8/12 xl:w-6/12'>
             <div className='flex flex-wrap items-center justify-between md:flex-nowrap'>
-                <div className='w-full space-x-12 flex justify-center text-gray-300 sm:w-7/12 md:justify-start'>
+                <div className='w-full space-x-12 flex justify-center text-lime-500 sm:w-7/12 md:justify-start'>
                     <ul className='list-disc list-inside self-center space-y-8 '>
                         {
                           links.map((link) => (<LinkRouter key={link.title} to={link.to} className='hover:text-sky-400 transition'> <li>{link.title}
@@ -45,21 +45,13 @@ export default function Footer() {
                       </ul>
                     </div>
                     <div className='w-10/12 m-auto  mt-16 space-y-6 text-center sm:text-left sm:w-5/12 sm:mt-auto'>
-                        <span className='block text-gray-300'>Find your perfect trip, designed by insiders who know and love their cities!</span>
-                        <span className='block text-gray-300'>Developed by Debi 🌈 &copy; 2023</span>
-                        <span className='block text-gray-300'>Need help? <a href="#" className='font-semibold text-white'> Contact Us</a></span>
+                        <span className='block text-sky-400'>Find your perfect trip, designed by insiders who know and love their cities!</span>
+                        <span className='block text-sky-400'>Developed by Debi 🌈 &copy; 2023</span>
                     </div>
                   </div>
                 </div>
             </div>
-            {/* <div aria-hidden="true" className='absolute h-full inset-0 flex items-center'>
-                <div aria-hidden="true" className='bg-layers bg-scale w-56 h-56 m-auto blur-xl bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 rounded-full md:w-[30rem] md:h-[30rem] md:blur-3xl'></div>
-            </div>
-            <div aria-hidden="true" className='absolute inset-0 w-full h-full bg-[#020314] opacity-80'></div> */}
           </footer>
-      {/* <footer className='bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90% mb-0 '>
-        <p className='flex justify-center drop-shadow-darkShadow text-white'>Developed by Debi 🌈</p>
-      </footer> */}
     </>
   )
 }

@@ -100,8 +100,8 @@ const Carousel = () => {
 
   return (
     <>
-      <div className='bg-black text-center flex justify-center'>
-      <h2  className='text-center  text-lime-400 text-bold text-3xl tracking-widest drop-shadow-lightShadow mb-2 w-3/4 md:w-full'>Popular MYTINERARIES</h2>
+      <div className='bg-cyan-800 text-center flex justify-center'>
+      <h2  className='text-center  text-lime-400 text-bold text-3xl tracking-widest drop-shadow-darkShadow mb-2 w-3/4 md:w-full'>Popular MYTINERARIES</h2>
       </div>
       <div className='bg-cyan-600 flex justify-center min-h-[60vh] max-w-full'>
         <button className="btn btn-circle mt-[30vh] mr-2 text-indigo-600 bg-indigo-100 hover:bg-teal-600 hover:text-teal-100" onClick={handlePrev}>❮</button>

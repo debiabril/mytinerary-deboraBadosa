@@ -9,7 +9,7 @@ const router = createBrowserRouter([
     children:[
     {   path: '/', element: <Home />  },
     {  path: '/cities', element: <Cities /> },
-    {  path:'*', element: <h1 className="bg-black text-white text-center drop-shadow-lightShadow">Error Page</h1> }
+    {  path:'*', element: <h1 className="bg-black text-white text-center drop-shadow-lightShadow h-5/6">Error Page</h1> }
     ]},
 ])
 export default router;
