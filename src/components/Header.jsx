@@ -16,7 +16,7 @@ export default function Header() {
           <h1 id='titleNavbar' className='font-bold text-white tracking-widest drop-shadow-darkShadow '>MYTINERARY</h1>
         </nav>
         {
-          links.map((link) => (<LinkRouter key={link.title} to={link.to} className='navbar-link text-white drop-shadow-darkShadow hover:text-purple-800 hover:drop-shadow-none'> {link.title}
+          links.map((link, index) => (<LinkRouter key={index} to={link.to} className='navbar-link text-white drop-shadow-darkShadow hover:text-purple-800 hover:drop-shadow-none'> {link.title}
           </LinkRouter> ))
         }        
         <BtnAvatar/>
