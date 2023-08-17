@@ -13,7 +13,7 @@ export default function Footer() {
                 <div className='w-full space-x-12 flex justify-center text-lime-500 sm:w-7/12 md:justify-start'>
                     <ul className='list-disc list-inside self-center space-y-8 '>
                         {
-                          links.map((link) => (<LinkRouter key={link.title} to={link.to} className='hover:text-sky-400 transition'> <li>{link.title}
+                          links.map((link, index) => (<LinkRouter key={index} to={link.to} className='hover:text-sky-400 transition'> <li>{link.title}
                           </li></LinkRouter> ))
                         }  
                     </ul>
