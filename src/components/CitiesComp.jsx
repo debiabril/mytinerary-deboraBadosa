@@ -28,7 +28,7 @@ export default function CitiesComp() {
     return(
     <>
         <div className='bg-cyan-900 flex flex-col pb-5'>
-            <input onChange={handleInputChange} type="text" className='rounded-md text-center justify-center w-1/3 h-8 self-center my-3' placeholder='Search a city...'/>
+            <input onChange={handleInputChange} type="text" className='rounded-md text-center justify-center w-1/3 h-8 bg-indigo-100 self-center my-3' placeholder='Search a city...'/>
             <div className=' flex flex-wrap justify-center items-center gap-4'>
             {
                 cities?.length > 0 ? 
