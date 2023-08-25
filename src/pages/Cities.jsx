@@ -1,9 +1,12 @@
 import React from 'react'
+import CitiesComp from '../components/CitiesComp.jsx'
+import BannerCities from '../components/BannerCities.jsx'
 
 export default function Cities() {
   return (
-    <div className='flex justify-center h-[93vh] '>
-      <img className='object-cover m-auto' src="https://colegiomaya.edu.sv/en/wp-content/uploads/2018/03/underconstruction.jpg" />
-    </div>
+    <>
+      <BannerCities/>
+      <CitiesComp/>
+    </>
   )
 }

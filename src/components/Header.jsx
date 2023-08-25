@@ -3,6 +3,7 @@ import BtnAvatar from './BtnAvatar'
 import { Link as LinkRouter } from 'react-router-dom'
 import links from '../utiles/links'
 import '../styles/Header.css'
+import HamburgerMenu from './HamburgerMenu.jsx'
 
 
 export default function Header() {
@@ -15,10 +16,15 @@ export default function Header() {
           </svg>
           <h1 id='titleNavbar' className='font-bold text-white tracking-widest drop-shadow-darkShadow '>MYTINERARY</h1>
         </nav>
+        <div className='md:hidden'>
+          <HamburgerMenu/>
+        </div>
+        <div className='hidden md:flex md:justify-around w-full'>
         {
           links.map((link, index) => (<LinkRouter key={index} to={link.to} className='navbar-link text-white drop-shadow-darkShadow hover:text-purple-800 hover:drop-shadow-none'> {link.title}
           </LinkRouter> ))
-        }        
+        } 
+        </div>       
         <BtnAvatar/>
       </header>
     </>

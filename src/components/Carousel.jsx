@@ -3,7 +3,7 @@ import '../styles/Carousel.css'
 
 const Carousel = () => {
   let [index, setIndex] = useState(0);
-  const images = [{
+  const cities = [{
       title: 'City1',
       url: 'https://upload.wikimedia.org/wikipedia/commons/6/67/London_Skyline_%28125508655%29.jpeg',
       city: 'London',
@@ -110,14 +110,14 @@ const Carousel = () => {
             <a key={i} className='block group relative rounded-xl border-purple-400 border-2 border-double bg-black '>
               <img
                 className='absolute rounded-xl inset-0 object-cover object-center h-full w-full'
-                src={images[index + i].url}
+                src={cities[index + i].url}
               />
               <div className='relative p-4 sm:p-6 lg:p-8 bg-black bg-opacity-50 rounded-xl rounded-b-none'>
                 <p className='md:text-2xl text-center drop-shadow-darkShadow font-bold uppercase  tracking-widest text-lime-400'>
-                  {images[index + i].city}
+                  {cities[index + i].city}
                 </p>
                 <p className="text-lg text-center drop-shadow-darkShadow font-bold tracking-widest  text-cyan-400 md:text-2xl">
-                  {images[index + i].country}
+                  {cities[index + i].country}
                 </p>
               </div>
             </a>

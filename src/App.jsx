@@ -1,18 +1,18 @@
 import { RouterProvider } from 'react-router-dom'
 import './App.css'
-import router from './router/Router'
+import router from './router/Router.jsx'
+import { Provider } from 'react-redux'
+import { store } from './store/store'
 
-/* import Layout from './layouts/Layout'
-import Home from './pages/Home' */
+
 
 
 function App() {
   return (
     <>
-      {/* <Layout>
-        <Home/>
-      </Layout> */}
-      <RouterProvider router = {router}/>
+      <Provider store = {store}>
+        <RouterProvider router = {router}/>
+      </Provider>
     </>
   )
 }
