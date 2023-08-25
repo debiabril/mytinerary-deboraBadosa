@@ -4,6 +4,8 @@ import axios from 'axios'
 import { useEffect, useRef, useState } from 'react'
 import NotFound from './NotFound.jsx';
 import Search from './svgs/search.jsx';
+import Refresh from './svgs/Refresh.jsx';
+import { useNavigate } from 'react-router';
 
 
 
@@ -30,13 +32,21 @@ export default function CitiesComp() {
         }
     }
     
+    const navigate = useNavigate(0)
+    const refreshPage = () => {
+        navigate(0);
+    }
+
     return(
     <>
         <div className='bg-cyan-900 flex flex-col pb-5'>
             <div className='flex justify-center my-1 '>
             <input ref={inputSearch} type="text" className='rounded-md text-center justify-center w-1/3 h-8 bg-indigo-100 self-center my-3' placeholder='Search a city...'/>
-            <button onClick={handleInputSearch} className='border rounded-lg border-lime-500  mx-1 my-2 bg-teal-800 hover:bg-teal-600 hover:border-lime-400'>
+            <button onClick={handleInputSearch} className='border rounded-lg border-lime-500  mx-1 my-2 bg-teal-100 hover:bg-teal-600 hover:border-lime-400'>
                 <Search/>
+            </button>
+            <button onClick={refreshPage} className='border mx-1 my-2 rounded-lg border-lime-500  bg-teal-100 h-10 w-10 hover:bg-teal-600 hover:border-lime-400'>
+                <Refresh/>
             </button>
             </div>
             <div className=' flex flex-wrap justify-center items-center gap-4'>
