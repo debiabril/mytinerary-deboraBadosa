@@ -63,9 +63,9 @@ export default function ItineraryCity() {
                         <div className="chat-header">Obi-Wan Kenobi</div>
                         <div className="chat-bubble chat-bubble-warning">Not leave it in Darkness</div>
                         </div>
+                        <button>View Less</button>
                     </div>
                 </div>
-                <button>View Less</button>
             </div>
         </div>
     </div>
