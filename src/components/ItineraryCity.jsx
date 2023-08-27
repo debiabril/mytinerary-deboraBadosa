@@ -19,36 +19,53 @@ export default function ItineraryCity() {
                 <h2>Name of the Itinerary</h2>
             </div>
             <div className='min-h-[15vh] flex justify-center bg-teal-700 my-2 rounded-lg p-2'>
-                <div className='w-[30vw]' > <h2> Price Duration </h2> </div>
-                <div className='w-[30vw]' > <h2> User and Photo </h2></div>
-                <div className='w-[30vw]' > <h2>Likes y Hashtags</h2> </div>
+                <div className='w-[30vw] flex justify-center' > <h2> Price Duration </h2> </div>
+                <div className='w-[30vw] flex justify-center' > <h2> User and Photo </h2></div>
+                <div className='w-[30vw] flex justify-center' > 
+                    <h2>Hashtags</h2> 
+                    <div className="btn"> 
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 fill-red-500 " fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" /></svg>
+                    </div>      
+                </div>
             </div>
             <div className='min-h-[15vh] bg-teal-700 my-2 rounded-lg p-2'>
-                <button>Button View More</button>
-                <div className='m-4'>
-                    <div className="chat chat-start ">
-                        <div className="chat-bubble chat-bubble-primary">What kind of nonsense is this</div>
-                        </div>
-                        <div className="chat chat-start">
-                        <div className="chat-bubble chat-bubble-secondary">Put me on the Council and not make me a Master!??</div>
-                        </div>
-                        <div className="chat chat-start">
-                        <div className="chat-bubble chat-bubble-accent">That's never been done in the history of the Jedi. It's insulting!</div>
-                        </div>
-                        <div className="chat chat-end">
-                        <div className="chat-bubble chat-bubble-info">Calm down, Anakin.</div>
-                        </div>
-                        <div className="chat chat-end">
-                        <div className="chat-bubble chat-bubble-success">You have been given a great honor.</div>
-                        </div>
-                        <div className="chat chat-end">
-                        <div className="chat-bubble chat-bubble-warning">To be on the Council at your age.</div>
-                        </div>
-                        <div className="chat chat-end">
-                        <div className="chat-bubble chat-bubble-error">It's never happened before.</div>
+                <div className="collapse">
+                    <input type="checkbox" /> 
+                    <div className="collapse-title text-xl font-medium text-center">
+                        Click here to see the comments
+                        {/* <button>Button View More</button> */}
                     </div>
-                    <button> button View Less</button>
-                </div> 
+                    <div className="collapse-content"> 
+                    <div className="chat chat-start">
+                        <div className="chat-image avatar">
+                            <div className="w-10 rounded-full">
+                            <img src="https://ocdn.eu/pulscms-transforms/1/QiUk9kuTURBXy84NjNmNTZlZi03YjkxLTRjOGMtODRmNS0xYWY5YzYzOGE5MGYuanBlZ5GVAs0BVMzTw8PeAAGhMAE" />
+                            </div>
+                        </div>
+                        <div className="chat-header">Obi-Wan Kenobi</div>
+                        <div className="chat-bubble chat-bubble-warning">It was said that you would, destroy the Sith, not join them.</div>
+                        </div>
+                        <div className="chat chat-start">
+                        <div className="chat-image avatar">
+                            <div className="w-10 rounded-full">
+                            <img src="https://ocdn.eu/pulscms-transforms/1/QiUk9kuTURBXy84NjNmNTZlZi03YjkxLTRjOGMtODRmNS0xYWY5YzYzOGE5MGYuanBlZ5GVAs0BVMzTw8PeAAGhMAE" />
+                            </div>
+                        </div>
+                        <div className="chat-header">Obi-Wan Kenobi</div>
+                        <div className="chat-bubble chat-bubble-warning">It was you who would bring balance to the Force</div>
+                        </div>
+                        <div className="chat chat-start">
+                        <div className="chat-image avatar">
+                            <div className="w-10 rounded-full">
+                            <img src="https://ocdn.eu/pulscms-transforms/1/QiUk9kuTURBXy84NjNmNTZlZi03YjkxLTRjOGMtODRmNS0xYWY5YzYzOGE5MGYuanBlZ5GVAs0BVMzTw8PeAAGhMAE" />
+                            </div>
+                        </div>
+                        <div className="chat-header">Obi-Wan Kenobi</div>
+                        <div className="chat-bubble chat-bubble-warning">Not leave it in Darkness</div>
+                        </div>
+                    </div>
+                </div>
+                <button>View Less</button>
             </div>
         </div>
     </div>
