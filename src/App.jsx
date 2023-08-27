@@ -2,7 +2,7 @@ import { RouterProvider } from 'react-router-dom'
 import './App.css'
 import router from './router/Router.jsx'
 import { Provider } from 'react-redux'
-import { store } from './store/store'
+import { store } from './store/store.js'
 
 
 

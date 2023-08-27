@@ -24,7 +24,7 @@ export default function CitiesComp() {
             setCities(res.data.cities)
         }catch (error){
             if(error.response.status === 404){
-                console.log("We didn't find any city with that name");
+                Swal.fire('We did not find any city with that name');
                 setCities([])
             }else{
                 console.log(error)

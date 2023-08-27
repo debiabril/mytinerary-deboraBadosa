@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import UnderContruction from './UnderContruction.jsx';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
 import { Link as LinkRouter } from 'react-router-dom'
+import ItineraryCity from './ItineraryCity.jsx';
 
 
 export default function DetailsCard() {
@@ -15,7 +15,7 @@ export default function DetailsCard() {
   },[]);
   return (
     <>
-      <div className='bg-cover bg-center min-h-[80vh] text-white' style={{ backgroundImage: `url('${cities?.url}')` }}>
+      <div className='bg-cover bg-center min-h-[95vh] text-white' style={{ backgroundImage: `url('${cities?.url}')` }}>
         <div className='backdrop-blur-sm py-12 min-h-[50vh] flex flex-col justify-center rounded-3xl'> 
         <h2 className='text-center text-4xl py-1 '>{cities?.city}</h2>
         <h3 className='text-center text-3xl py-1' >{cities?.country}</h3>
@@ -27,7 +27,7 @@ export default function DetailsCard() {
           <LinkRouter to='/' className='navbar-link text-black drop-shadow-darkShadow hover:text-purple-800 hover:drop-shadow-none flex self-end mr-14 border border-solid rounded-lg border-indigo-400 bg-cyan-300 px-3 py-2'> Go home </LinkRouter>
           </div>
         </div>
-        <UnderContruction/>
+        <ItineraryCity/>
       </div>
     </>
   )
