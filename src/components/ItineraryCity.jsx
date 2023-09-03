@@ -1,6 +1,7 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom';
+import UnderConstruction from './UnderContruction.jsx'
 
 
 export default function ItineraryCity() {
@@ -13,7 +14,7 @@ export default function ItineraryCity() {
     },[]);
     return (
     <>
-    <div className='flex justify-center'>
+        <div className='flex justify-center'>
         <div className='min-h-[30vh] w-[60vw]'>
             <div className='min-h-[10vh] flex justify-center bg-teal-700 my-2 rounded-lg p-2'>
                 <h2>Name of the Itinerary</h2>
@@ -36,39 +37,40 @@ export default function ItineraryCity() {
                         {/* <button>Button View More</button> */}
                     </div>
                     <div className="collapse-content"> 
-                    <div className="chat chat-start">
-                        <div className="chat-image avatar">
-                            <div className="w-10 rounded-full">
-                            <img src="https://ocdn.eu/pulscms-transforms/1/QiUk9kuTURBXy84NjNmNTZlZi03YjkxLTRjOGMtODRmNS0xYWY5YzYzOGE5MGYuanBlZ5GVAs0BVMzTw8PeAAGhMAE" />
+                        <UnderConstruction/>
+                        {/* <div className="chat chat-start">
+                            <div className="chat-image avatar">
+                                <div className="w-10 rounded-full">
+                                <img src="https://ocdn.eu/pulscms-transforms/1/QiUk9kuTURBXy84NjNmNTZlZi03YjkxLTRjOGMtODRmNS0xYWY5YzYzOGE5MGYuanBlZ5GVAs0BVMzTw8PeAAGhMAE" />
+                                </div>
                             </div>
-                        </div>
-                        <div className="chat-header">Obi-Wan Kenobi</div>
-                        <div className="chat-bubble chat-bubble-warning">It was said that you would, destroy the Sith, not join them.</div>
-                        </div>
-                        <div className="chat chat-start">
-                        <div className="chat-image avatar">
-                            <div className="w-10 rounded-full">
-                            <img src="https://ocdn.eu/pulscms-transforms/1/QiUk9kuTURBXy84NjNmNTZlZi03YjkxLTRjOGMtODRmNS0xYWY5YzYzOGE5MGYuanBlZ5GVAs0BVMzTw8PeAAGhMAE" />
+                            <div className="chat-header">Obi-Wan Kenobi</div>
+                            <div className="chat-bubble chat-bubble-warning">It was said that you would, destroy the Sith, not join them.</div>
                             </div>
-                        </div>
-                        <div className="chat-header">Obi-Wan Kenobi</div>
-                        <div className="chat-bubble chat-bubble-warning">It was you who would bring balance to the Force</div>
-                        </div>
-                        <div className="chat chat-start">
-                        <div className="chat-image avatar">
-                            <div className="w-10 rounded-full">
-                            <img src="https://ocdn.eu/pulscms-transforms/1/QiUk9kuTURBXy84NjNmNTZlZi03YjkxLTRjOGMtODRmNS0xYWY5YzYzOGE5MGYuanBlZ5GVAs0BVMzTw8PeAAGhMAE" />
+                            <div className="chat chat-start">
+                            <div className="chat-image avatar">
+                                <div className="w-10 rounded-full">
+                                <img src="https://ocdn.eu/pulscms-transforms/1/QiUk9kuTURBXy84NjNmNTZlZi03YjkxLTRjOGMtODRmNS0xYWY5YzYzOGE5MGYuanBlZ5GVAs0BVMzTw8PeAAGhMAE" />
+                                </div>
                             </div>
-                        </div>
-                        <div className="chat-header">Obi-Wan Kenobi</div>
-                        <div className="chat-bubble chat-bubble-warning">Not leave it in Darkness</div>
-                        </div>
-                        <button>View Less</button>
+                            <div className="chat-header">Obi-Wan Kenobi</div>
+                            <div className="chat-bubble chat-bubble-warning">It was you who would bring balance to the Force</div>
+                            </div>
+                            <div className="chat chat-start">
+                            <div className="chat-image avatar">
+                                <div className="w-10 rounded-full">
+                                <img src="https://ocdn.eu/pulscms-transforms/1/QiUk9kuTURBXy84NjNmNTZlZi03YjkxLTRjOGMtODRmNS0xYWY5YzYzOGE5MGYuanBlZ5GVAs0BVMzTw8PeAAGhMAE" />
+                                </div>
+                            </div>
+                            <div className="chat-header">Obi-Wan Kenobi</div>
+                            <div className="chat-bubble chat-bubble-warning">Not leave it in Darkness</div>
+                            </div>
+                            <button>View Less</button>*/}
+                        </div> 
                     </div>
                 </div>
             </div>
         </div>
-    </div>
     </>
   )
 }

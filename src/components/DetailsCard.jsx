@@ -7,6 +7,7 @@ import ItineraryCity from './ItineraryCity.jsx';
 
 export default function DetailsCard() {
   let{id} = useParams();
+  
   const[cities, setCities]= useState();
   useEffect(()=>{
         axios.get(`http://localhost:3000/api/cities/${id}`)

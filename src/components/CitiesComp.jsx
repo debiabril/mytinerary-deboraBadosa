@@ -1,37 +1,26 @@
 import { Link as LinkRouter }  from 'react-router-dom'
 import {Cards} from './Cards.jsx'
-import axios from 'axios'
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useRef } from 'react'
 import NotFound from './NotFound.jsx';
 import Search from './svgs/search.jsx';
 import Refresh from './svgs/Refresh.jsx';
 import { useNavigate } from 'react-router';
-
+import { useDispatch, useSelector } from 'react-redux';
+import { filter_cities, get_cities } from '../store/actions/cityActions.js';
 
 
 export default function CitiesComp() {
-    const[cities, setCities]= useState();
+    const cities = useSelector((store) => store.cityReducer.cities)
     let inputSearch = useRef();
+    const dispatch = useDispatch()
     useEffect(()=>{
-        axios.get('http://localhost:3000/api/cities')
-        .then(response=>{setCities(response.data.cities)})
-        .catch(error=>{console.log(error)})
+        dispatch(get_cities()) 
     },[]);
-    const handleInputSearch = async() =>{
-        const city = inputSearch.current.value
-        try{
-            const res = await axios.get(`http://localhost:3000/api/cities?city=${city}`)
-            setCities(res.data.cities)
-        }catch (error){
-            if(error.response.status === 404){
-                Swal.fire('We did not find any city with that name');
-                setCities([])
-            }else{
-                console.log(error)
-            }
-        }
+    const handleInputSearch = () =>{
+        dispatch(filter_cities({
+            city: inputSearch.current.value
+        }))  
     }
-    
     const navigate = useNavigate(0)
     const refreshPage = () => {
         navigate(0);
