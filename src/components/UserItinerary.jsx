@@ -12,7 +12,7 @@ export default function UserItinerary({id}) {
   return (
     <>
     <div className="container">
-        <img src={user.image} className='rounded-3xl h-24' />
+        <img src={user.image} className='rounded-full h-24' />
         <h2 className='text-md '>{user.name}</h2>  
     </div>
     </>
