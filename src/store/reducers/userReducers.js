@@ -1,8 +1,10 @@
 import { createReducer } from "@reduxjs/toolkit";
-import {user_photo} from "../actions/userActions.js";
+import {get_user_by_id, user_photo} from "../actions/userActions.js";
+
 
 
 const initialState = {
+    user:{},
     name: 'Random Name',
     photo: 'https://us.123rf.com/450wm/martialred/martialred1608/martialred160800018/61263271-cuenta-de-usuario-perfil-del-icono-del-c%C3%ADrculo-plana-para-aplicaciones-y-sitios-web.jpg'
 }
@@ -13,6 +15,13 @@ const userReducer = createReducer (initialState, (builder)=>
                 ...state,
                 photo: action.payload.photo
             }
+        })
+        .addCase(get_user_by_id.fulfilled,
+            (state, action)=>{
+                return{
+                    ...state,
+                    user: action.payload.user
+                }
         })
 )
 export default userReducer
