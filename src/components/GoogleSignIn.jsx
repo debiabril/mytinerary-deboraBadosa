@@ -25,11 +25,11 @@ export const GoogleSignIn = () => {
       }
     
     useEffect(()=>{
-        window.onload = function () {
-            google.accounts.id.initialize({
-              client_id: "1042169502858-4qq0pse13h4n3trrqt2d60emg6o0meq0.apps.googleusercontent.com",
-              callback: handleCredentialResponse
-            });
+      if(window.google) {
+        window.google.accounts.id.initialize({
+            client_id: "1048062830252-ckdg0mtlls0i4km5qeorr395jq9cv15l.apps.googleusercontent.com",
+            callback: handleCredentialResponse
+        });
             google.accounts.id.renderButton(
               googleButton.current,
               { 
