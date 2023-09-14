@@ -49,8 +49,8 @@ export default function FormSignIn() {
                   </div>
                   <form onSubmit={handleSignIn}>
                     <p className="mb-4 text-center">Please login to your account</p>
-                    <input onChange={handleInput} type="email" label="email" name='email' className="mb-4 text-center w-full rounded-md" placeholder='Email Adress' />
-                    <input onChange={handleInput} type="password" name='password' className="mb-4 text-center w-full rounded-md" placeholder='Password'/>
+                    <input onChange={handleInput} type="email" label="email" name='email' className="mb-4 text-center text-black w-full rounded-md" placeholder='Email Adress' />
+                    <input onChange={handleInput} type="password" name='password' className="mb-4 text-center text-black w-full rounded-md" placeholder='Password'/>
                     <div className='flex justify-center mb-2'>
                     <GoogleSignIn  /></div>
                     <div className="mb-12 pb-1  text-center">
@@ -58,7 +58,6 @@ export default function FormSignIn() {
                           className="mb-3 inline-block w-full rounded px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90%' text-white "
                           type="button" onClick={handleSignIn}>Sign in 
                         </button>
-                        <a href="#!">Forgot password?</a>
                     </div>
                     <div className="flex items-center justify-between pb-6">
                       <p className="mb-0 mr-2">Don't have an account?</p>
