@@ -5,17 +5,20 @@ import Layout from "../layouts/Layout.jsx"
 import Details from "../pages/Details.jsx";
 import SignIn from "../pages/SignIn.jsx";
 import SignUp from "../pages/SignUp.jsx";
+import ProtectedRoute from "./ProtectedRoute.jsx";
+import NotFound from "../components/NotFound.jsx";
 
 const router = createBrowserRouter([
  {  path: '/', 
     element: <Layout/> , 
     children:[
     {   path: '/', element: <Home />  },
-    {   path: '/cities', element: <Cities /> },
+    {   path: '/cities', element: <Cities/> },
     {   path: '/cities/:id', element: <Details/> },
-    {   path:'/signin', element: <SignIn/> },
+    {   path:'/signin', element: (<ProtectedRoute path='/'><SignIn/></ProtectedRoute>) },
     {   path:'/signup', element: <SignUp/> },
-    {   path:'*', element: <h1 className="bg-black text-white text-center drop-shadow-lightShadow h-5/6">Error Page</h1> }
+    {   path:'*', element: <NotFound/> },
+    {   path:'/404', element: <NotFound/> }
     ]},
 ])
 export default router;
