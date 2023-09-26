@@ -82,25 +82,24 @@ export default function ItineraryCity({ _id} ) {
             <div className='min-h-[10vh] flex justify-center bg-teal-700 my-2 rounded-lg p-2'>
                 <h2 className='text-3xl mt-3'>Activities</h2>
             </div>
+                <div className='min-h-[20vh] flex justify-center flex-col bg-teal-700 my-2 rounded-lg p-2'>
                 {
                     itinerary?.activities?.length > 0 
                         ? itinerary?.activities?.map((activity)=>(
                             <>
-                            <div className='min-h-[20vh] flex justify-center bg-teal-700 my-2 rounded-lg p-2'>
-                            <div className=''>
+                            <div className='flex justify-around flex-col'>
                             <h2 className='text-center text-3xl'>{activity?.name}</h2>
-                            <div className='flex flex-col md:flex-row md:justify-between max-w-xs'>  
-                                <img className='items-center rounded-lg  w-40 max-w-[25rem]' src={activity?.image}/>
+                            <div className='flex flex-col md:flex-row md:justify-between max-w-xs lg:ml-24 2xl:ml-44 '>  
+                                <img className='items-center rounded-lg  w-40 h-40 md:w-96 md:h-80 object-cover' src={activity?.image}/>
                                 <p className=' items-center mx-10'>{activity?.text}</p> 
-                            </div>
                             </div>
                             </div>
                             </>
                         ))
                         : <p></p>
                 }
-            
-        </div>
+            </div>
+            </div>
         </div>
     </>
     )
