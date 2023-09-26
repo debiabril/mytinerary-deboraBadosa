@@ -54,44 +54,34 @@ export default function ItineraryCity({ _id} ) {
                 <div className="collapse">
                     <input type="checkbox" /> 
                     <div className="collapse-title text-2xl font-medium text-center">
-                        Click here to see the comments
+                        Click here to open/close the comments
                     </div>
                     <div className="collapse-content"> 
-                        <UnderConstruction/>
+                        {/* <UnderConstruction/> */}
                         {/* 
                         {itinerary.comments} */}
-                        <div className="chat chat-start">
-                            <div className="chat-image avatar">
-                                <div className="w-10 rounded-full">
-                                <img src="https://ocdn.eu/pulscms-transforms/1/QiUk9kuTURBXy84NjNmNTZlZi03YjkxLTRjOGMtODRmNS0xYWY5YzYzOGE5MGYuanBlZ5GVAs0BVMzTw8PeAAGhMAE" />
+
+                        {
+                            itinerary?.comments?.length > 0 
+                            ? itinerary?.comments?.map((comment)=>(
+                                <div className="chat chat-start">
+                                <div className="chat-image avatar">
+                                    <div className="w-10 rounded-full">
+                                    <img src={comment?.user?.image} />
+                                    </div>
                                 </div>
+                                <div className="chat-header">{comment?.user?.name}</div>
+                                <div className="chat-bubble chat-bubble-warning">{comment?.comment}</div>
                             </div>
-                            <div className="chat-header">Obi-Wan Kenobi</div>
-                            <div className="chat-bubble chat-bubble-warning">It was said that you would, destroy the Sith, not join them.</div>
-                            </div>
-                            <div className="chat chat-start">
-                            <div className="chat-image avatar">
-                                <div className="w-10 rounded-full">
-                                <img src="https://ocdn.eu/pulscms-transforms/1/QiUk9kuTURBXy84NjNmNTZlZi03YjkxLTRjOGMtODRmNS0xYWY5YzYzOGE5MGYuanBlZ5GVAs0BVMzTw8PeAAGhMAE" />
-                                </div>
-                            </div>
-                            <div className="chat-header">Obi-Wan Kenobi</div>
-                            <div className="chat-bubble chat-bubble-warning">It was you who would bring balance to the Force</div>
-                            </div>
-                            <div className="chat chat-start">
-                            <div className="chat-image avatar">
-                                <div className="w-10 rounded-full">
-                                <img src="https://ocdn.eu/pulscms-transforms/1/QiUk9kuTURBXy84NjNmNTZlZi03YjkxLTRjOGMtODRmNS0xYWY5YzYzOGE5MGYuanBlZ5GVAs0BVMzTw8PeAAGhMAE" />
-                                </div>
-                            </div>
-                            <div className="chat-header">Obi-Wan Kenobi</div>
-                            <div className="chat-bubble chat-bubble-warning">Not leave it in Darkness</div>
-                            </div>
-                            <button>View Less</button>
-                        </div> 
-                    </div>
+                            ))
+                            : <p>There are no Comments</p>
+                        }
+                    </div> 
+                </div>
             </div>
-            
+            <div className='min-h-[10vh] flex justify-center bg-teal-700 my-2 rounded-lg p-2'>
+                <h2 className='text-3xl mt-3'>Activities</h2>
+            </div>
                 {
                     itinerary?.activities?.length > 0 
                         ? itinerary?.activities?.map((activity)=>(
@@ -99,9 +89,9 @@ export default function ItineraryCity({ _id} ) {
                             <div className='min-h-[20vh] flex justify-center bg-teal-700 my-2 rounded-lg p-2'>
                             <div className=''>
                             <h2 className='text-center text-3xl'>{activity?.name}</h2>
-                            <div className='flex justify-between '>  
-                                <img className='items-center rounded-lg mx-10' src={activity?.image}/>
-                                <p className='w-32 items-center mx-10'>{activity?.text}</p> 
+                            <div className='flex flex-col md:flex-row md:justify-between max-w-xs'>  
+                                <img className='items-center rounded-lg  w-40 max-w-[25rem]' src={activity?.image}/>
+                                <p className=' items-center mx-10'>{activity?.text}</p> 
                             </div>
                             </div>
                             </div>
