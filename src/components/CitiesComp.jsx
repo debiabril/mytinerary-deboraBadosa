@@ -2,11 +2,11 @@ import { Link as LinkRouter }  from 'react-router-dom'
 import {Cards} from './Cards.jsx'
 import { useEffect, useRef } from 'react'
 import NotFound from './NotFound.jsx';
-import Search from './svgs/search.jsx';
 import Refresh from './svgs/Refresh.jsx';
 import { useNavigate } from 'react-router';
 import { useDispatch, useSelector } from 'react-redux';
 import { filter_cities, get_cities } from '../store/actions/cityActions.js';
+import Search from './svgs/search.jsx';
 
 
 export default function CitiesComp() {
