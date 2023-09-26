@@ -38,12 +38,6 @@ export default function FormSignUp() {
       dispatch(user_signup({
         data: formData
       })) 
-      Swal.fire({
-        icon: 'success',
-        title: 'Great!',
-        text: 'User registered!',
-        footer: '<a href="/signin">Please Sign In</a>'
-    })
     } catch (error) {
       console.log(error);
     }

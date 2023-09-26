@@ -6,7 +6,6 @@ import { user_signout } from '../store/actions/userActions';
 
 export default function BtnAvatar() {
   const user = useSelector(store => store.userReducer.user);
-  console.log(user);
   const dispatch = useDispatch();
 
     const handleSignout = async () => {

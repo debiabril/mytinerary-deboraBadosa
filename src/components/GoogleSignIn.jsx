@@ -27,7 +27,7 @@ export const GoogleSignIn = () => {
     useEffect(()=>{
       if(window.google) {
         window.google.accounts.id.initialize({
-            client_id: "1048062830252-ckdg0mtlls0i4km5qeorr395jq9cv15l.apps.googleusercontent.com",
+            client_id: "1042169502858-k0nfmjgvbd9oe0nk3n825h9v0qgbf029.apps.googleusercontent.com",
             callback: handleCredentialResponse
         });
             google.accounts.id.renderButton(
