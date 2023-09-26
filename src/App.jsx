@@ -12,9 +12,9 @@ import { user_token } from './store/actions/userActions.js'
 
 function App() {
   let dispatch = useDispatch();
-
+  const URL_BASE = 'https://mytineraryback-2tzl.onrender.com'
   useEffect(() => {
-    let url = `http://localhost:3000/api/auth/token`
+    let url = `${URL_BASE}/api/auth/token`
     let token = localStorage.getItem('token')
     if (token) {
       let configs = { headers: { 'Authorization': `Bearer ${token}` } }
@@ -26,7 +26,7 @@ function App() {
   }, [])
 
   return (
-   <RouterProvider router = {router}/>
+    <RouterProvider router = {router}/>
   )
 }
 
