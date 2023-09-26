@@ -89,9 +89,11 @@ export default function ItineraryCity({ _id} ) {
                             <>
                             <div className='flex justify-around flex-col'>
                             <h2 className='text-center text-3xl'>{activity?.name}</h2>
-                            <div className='flex flex-col md:flex-row md:justify-between max-w-xs lg:ml-24 2xl:ml-44 '>  
+                            <div className='flex flex-col md:w-[100vw] md:flex-row md:justify-between max-w-xs lg:ml-24 2xl:ml-44 '>  
                                 <img className='items-center rounded-lg  w-40 h-40 md:w-96 md:h-80 object-cover' src={activity?.image}/>
-                                <p className=' items-center mx-10'>{activity?.text}</p> 
+                                <div className='flex justify-center items-center'>
+                                <p className='md:w-36 md:mx-2 text-center '>{activity?.text}</p> 
+                                </div>
                             </div>
                             </div>
                             </>
