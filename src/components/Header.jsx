@@ -21,7 +21,7 @@ export default function Header() {
         </div>
         <div className='hidden md:flex md:justify-around w-full'>
         {
-          links.map((link, index) => (<LinkRouter key={index} to={link.to} className='navbar-link text-white drop-shadow-darkShadow hover:text-purple-800 hover:drop-shadow-none'> {link.title}
+          links.map((link, index) => (<LinkRouter key={index} to={link.to} className='navbar-link text-white text-xl drop-shadow-darkShadow hover:text-purple-800 hover:drop-shadow-none'> {link.title}
           </LinkRouter> ))
         } 
         </div>       
